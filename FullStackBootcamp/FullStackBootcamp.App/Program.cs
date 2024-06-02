@@ -1,4 +1,5 @@
 ﻿using FullStackBootcamp.App;
+using FullStackBootcamp.App.Constructors;
 using FullStackBootcamp.App.Nullable;
 using FullStackBootcamp.App.OOPConcepts.Abstraction;
 
@@ -13,6 +14,18 @@ using FullStackBootcamp.App.OOPConcepts.Abstraction;
 IWriteProductRepository writeProductRepository = new ProductRepositoryWithSqlServer();
 
 IReadProductRepository readProductRepository = new ReadProductRepositoryWithSqlServer();
+
+var productX = new ProductX();
+ProductX.Tax = 20;
+var a = productX.TaxCalculation();
+var b = productX.TaxCalculation2();
+ProductX.Tax = 30;
+
+var product = new ProductX("Kalem 1", 20);
+var product2 = new ProductX("Kalem 2", 30);
+var product3 = new ProductX("Kalem 3", 40);
+
+
 // Console.WriteLine() => Ekrana yazı yazdırmak için kullanılır.
 // Konsol uygulamalarında kod yukarıdan aşağıya doğru çalışır. Tanımlanan kodlar sırasıyla çalışır. Sonrasında konsol uygulaması kapanır. Servera ihtiyaç duymaz.
 /*

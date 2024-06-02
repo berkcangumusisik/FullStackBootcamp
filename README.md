@@ -11,3 +11,10 @@
 - Nullable
 - Encapsulation
 - Inheritance
+
+# 2. Gün
+- Interface
+- Abstraction
+- Constructors
+- Static Member ve Methods
+- 
