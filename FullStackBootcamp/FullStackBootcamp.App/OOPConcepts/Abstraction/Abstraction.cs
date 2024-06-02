@@ -6,17 +6,70 @@ using System.Threading.Tasks;
 
 namespace FullStackBootcamp.App.OOPConcepts.Abstraction
 {
+
+    public class Computer
+    {
+        public int Ram { get; set; }
+        public int Cpu { get; set; }
+        public int Gpu { get; set; }
+
+        public void Create(string arg1)
+        {
+
+        }
+    }
     internal class Product
     {
         public int Id { get; set; }
         public string Name { get; set; }
     }
+
+    // abstract class : Soyut sınıflar, içerisinde soyut metotlar ve somut metotlar bulundurabilir.
+    // Soyut metotlar, gövdesiz metotlardır. Somut metotlar ise gövdeli metotlardır.
+    // Soyut sınıflardan nesne oluşturulamaz. Yani new anahtar kelimesi ile instance alınamaz.
+    public abstract class WriteProductRepositoryAbstract
+    {
+        public int Calculate(int tax, int price)
+        {
+            return price * tax;
+        }
+        internal abstract int CreateProduct(Product product);
+        internal abstract void UpdateProduct(Product product);
+        internal abstract void DeleteProduct(int productId);
+    }
+
+    public class WriteProductRepositoryWithSqlServer2 : WriteProductRepositoryAbstract
+    {
+        public WriteProductRepositoryWithSqlServer2()
+        {
+        }
+
+        internal override int CreateProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal override void DeleteProduct(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal override void UpdateProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
+    }
     internal interface IWriteProductRepository
     {
+        public int Calculate(int tax, int price)
+        {
+            return price * tax;
+        }
         public int CreateProduct(Product product);
         public void UpdateProduct(Product product);
         public void DeleteProduct(int productId);
     }
+
 
     internal interface IReadProductRepository
     {
@@ -68,5 +121,8 @@ namespace FullStackBootcamp.App.OOPConcepts.Abstraction
 
 Coupling (Bağlantı)  : Bir sınıfın başka bir sınıfa olan bağımlılığıdır. Bağımlılık arttıkça coupling artar. 
 
+
+Abstract Class ile Interface Farkları
+- Abstractta yapılan her şey interface ile de yapılabilir.
 
  */

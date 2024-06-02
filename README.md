@@ -17,4 +17,4 @@
 - Abstraction
 - Constructors
 - Static Member ve Methods
-- 
+- Abstract Classlar
