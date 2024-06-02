@@ -1,15 +1,18 @@
 ﻿using FullStackBootcamp.App;
 using FullStackBootcamp.App.Nullable;
-using FullStackBootcamp.App.OOPConcepts;
+using FullStackBootcamp.App.OOPConcepts.Abstraction;
 
-Console.WriteLine("Hello, World!");
-var loop = new Loop();
-loop.ForLoop();
+//Console.WriteLine("Hello, World!");
+//var loop = new Loop();
+//loop.ForLoop();
 
-var tax = new Encapsulation.Tax();
+//var tax = new Encapsulation.Tax();
 
-var person = new Person();
+//var person = new Person();
 
+IWriteProductRepository writeProductRepository = new ProductRepositoryWithSqlServer();
+
+IReadProductRepository readProductRepository = new ReadProductRepositoryWithSqlServer();
 // Console.WriteLine() => Ekrana yazı yazdırmak için kullanılır.
 // Konsol uygulamalarında kod yukarıdan aşağıya doğru çalışır. Tanımlanan kodlar sırasıyla çalışır. Sonrasında konsol uygulaması kapanır. Servera ihtiyaç duymaz.
 /*
