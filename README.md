@@ -18,3 +18,6 @@
 - Constructors
 - Static Member ve Methods
 - Abstract Classlar
+- Encapsulation
+- Polimorfizm
+- Hata Yönetimi
