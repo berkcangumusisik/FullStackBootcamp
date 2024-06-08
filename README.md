@@ -21,3 +21,12 @@
 - Encapsulation
 - Polimorfizm
 - Hata Yönetimi
+
+
+# 3.Gün
+- Diziler
+- Koleksiyonlar
+- Diziler ve koleksiyonlar Arasındaki Farklar
+- Boxing
+- Unboxing
+- 
