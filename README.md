@@ -29,4 +29,10 @@
 - Diziler ve koleksiyonlar Arasındaki Farklar
 - Boxing
 - Unboxing
-- 
+- List
+- HashSet
+- Dictionary
+- HashTable
+- LinkedList
+- Queue
+- Stack

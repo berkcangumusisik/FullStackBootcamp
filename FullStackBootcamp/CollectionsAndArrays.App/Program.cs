@@ -1,4 +1,6 @@
-﻿namespace CollectionsAndArrays.App
+﻿using System.Collections;
+
+namespace CollectionsAndArrays.App
 {
     internal class Program
     {
@@ -92,9 +94,70 @@
 
             }); // Foreach döngüsü ile liste elemanlarına erişim sağlanabilir. Daha basit ve okunabilir bir yapıdır.
 
+            // HashSets : Listelerden farklı olarak aynı elemanı birden fazla eklemeye izin vermez.
+            var names5 = new HashSet<string>();
+            names5.Add("John");
+            names5.Add("Jack");
+            // names5.Add("John"); // Aynı elemanı eklemeye çalışıldı. HashSet, aynı elemanı birden fazla eklemeye izin vermez.
+            
+            // Sıralama önemli değilse HashSet kullanılabilir. Sıralama önemli ise List kullanılabilir. HashSet, sıralama yapmaz.Genellikle HashSet kullanılmaz.
+            foreach (var item in names5)
+            {
+                
+            }
 
+            // Dictionary : Key-Value çiftleri ile çalışır. Key değerleri benzersiz olmalıdır.Sıralıdır. Key değerleri ile Value değerlerine erişim sağlanabilir. Key değerleri aynı olamaz.
+            var cities = new Dictionary<int, string>();
+            cities.Add(34,"İstanbul");
+            cities.Add(6,"Ankara");
+            cities.Add(35,"İzmir");
+
+            foreach (var item in cities)
+            {
+                Console.WriteLine(item.Key + " - " + item.Value);
+            }
+
+            // Hashtable : Dictionary'den farklı olarak Key ve Value değerleri object tipindedir. Key ve Value değerleri object tipinde olduğu için boxing ve unboxing işlemleri gerçekleşir. Dictionary'den daha eski bir yapıdır.
+
+            var cities2 = new Hashtable();
+            cities.Add(34, "İstanbul");
+            cities.Add(6, "Ankara");
+
+           // LinkedList : Listelerden farklı olarak elemanlar arasında bağlantılar bulunur. Elemanlar arasında bağlantılar olduğu için elemanlar arasında hızlı erişim sağlanabilir. Listelerde elemanlar arasında bağlantılar olmadığı için elemanlar arasında hızlı erişim sağlanamaz.
             
-            
+           LinkedList<string> names10 = new LinkedList<string>();
+           var john = names10.AddLast("John");
+           // AddLast metodu ile sona eleman eklendi.
+           names10.AddFirst("Jack");
+           // AddFirst metodu ile başa eleman eklendi.
+           names10.AddAfter(john,"Jill");
+           // AddAfter metodu ile John elemanının sonrasına Jill elemanı eklendi.
+
+           foreach (var name in names10)
+           {
+                Console.WriteLine(name);
+           }
+
+           //Queue : FIFO (First In First Out) yapısına sahiptir. En önce eklenen eleman en önce çıkarılır.
+           Queue<int> myQueue = new Queue<int>();
+           myQueue.Enqueue(10); // Enqueue metodu ile eleman eklenir.
+           myQueue.Enqueue(20);
+           myQueue.Enqueue(30);
+           var queDeque =  myQueue.Dequeue(); // Dequeue metodu ile en üstteki eleman çıkarılır.
+           foreach (var item in myQueue)
+           {
+               Console.WriteLine(item);
+           }
+
+           //Stack : LIFO (Last In First Out) yapısına sahiptir. En son eklenen eleman en önce çıkarılır.
+           var numbers6 = new Stack();
+           numbers6.Push(10); // Push metodu ile eleman eklenir.
+           numbers6.Push(20);
+           numbers6.Push(30);
+           numbers6.Pop(); // Pop metodu ile en üstteki eleman çıkarılır.
+
+
+
         }
     }
 }
