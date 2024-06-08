@@ -157,6 +157,14 @@ namespace CollectionsAndArrays.App
            numbers6.Pop(); // Pop metodu ile en üstteki eleman çıkarılır.
 
 
+           // ArrayList : Object tipinde elemanlar tutar. 
+           ArrayList list = new ArrayList();
+           list.Add("John"); // Add metodu ile eleman eklendi.
+           list.Add(10);
+           list.Add(true);
+           list.Add(false);
+
+
 
         }
     }

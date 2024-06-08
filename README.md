@@ -36,3 +36,4 @@
 - LinkedList
 - Queue
 - Stack
+- ArrayList
