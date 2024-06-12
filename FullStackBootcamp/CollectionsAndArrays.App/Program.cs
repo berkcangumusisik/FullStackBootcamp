@@ -163,9 +163,7 @@ namespace CollectionsAndArrays.App
            list.Add(10);
            list.Add(true);
            list.Add(false);
-
-
-
+           
         }
     }
 }

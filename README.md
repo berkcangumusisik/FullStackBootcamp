@@ -37,3 +37,4 @@
 - Queue
 - Stack
 - ArrayList
+- SOLID Prensipleri
