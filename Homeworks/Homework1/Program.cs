@@ -56,3 +56,15 @@ shoppingCart.Checkout(200);
 
 shoppingCart = new ShoppingCart(payPalProcessor);
 shoppingCart.Checkout(300);
+
+/*
+Ödev 1:  SOLID prensiplerinin her birini uygulamak için her prensibi ayrı bir sınıf içinde gerçekleştiriniz.
+
+SOLID prensipleri, yazılım geliştirme sürecinde daha esnek, genişletilebilir ve bakım yapılabilir kodlar yazmak için beş temel prensibi içerir. Bu prensipler:
+
+S - Single Responsibility Principle (Tek Sorumluluk Prensibi)
+O - Open/Closed Principle (Açık/Kapalı Prensibi)
+L - Liskov Substitution Principle (Liskov Yerine Geçme Prensibi)
+I - Interface Segregation Principle (Arayüz Ayrımı Prensibi)
+D - Dependency Inversion Principle (Bağımlılıkların Tersine Çevrilmesi Prensibi)
+ */
