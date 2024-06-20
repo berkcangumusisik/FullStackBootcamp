@@ -38,3 +38,7 @@
 - Stack
 - ArrayList
 - SOLID Prensipleri
+
+# 4.Gün
+- Delegates
+- Events
