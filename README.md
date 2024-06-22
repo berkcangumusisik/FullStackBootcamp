@@ -46,3 +46,5 @@
 # 5. Gün
 - Generics
 - Extensions
+- Senkron Programlama
+- Asenkron Programlama

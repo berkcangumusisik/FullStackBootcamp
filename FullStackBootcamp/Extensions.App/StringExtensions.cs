@@ -10,6 +10,10 @@ namespace Extensions.App
     {
         public static bool IsNullOrEmptyOrWhiteSpace(this string value)
         {
+            if (IsValid(value))
+            {
+                return false;
+            }
             if(string.IsNullOrEmpty(value))
             {
                 return false;
@@ -20,6 +24,11 @@ namespace Extensions.App
             }
             return true;
 
+        }
+
+        private static bool IsValid(string value)
+        {
+            return string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value);
         }
     }
 }
