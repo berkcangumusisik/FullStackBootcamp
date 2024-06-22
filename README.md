@@ -42,3 +42,7 @@
 # 4.Gün
 - Delegates
 - Events
+
+# 5. Gün
+- Generics
+- Extensions
