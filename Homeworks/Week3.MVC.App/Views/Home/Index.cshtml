@@ -1,0 +1,20 @@
+﻿@model Week3.MVC.App.Models.ProductViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<p>ViewBag : @ViewBag.Message</p>
+<p>ViewData : @ViewData["Message"]</p>
+<p>
+    Product Name : @Model.Name
+</p>
+<p>
+    Product Price : @Model.Price
+</p>
+<p>
+    Product Description : @Model.Description
+</p>
+
+
+<a asp-controller="Home" asp-action="Privacy">Go</a>
+

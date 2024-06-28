@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<p>ViewData : @ViewData["Title"]</p>
+
+<a asp-page="error">TempData</a>
+
+<h1>Product List</h1>
+<p>Name : @Model.Product.Name</p>
+<p>Price : @Model.Product.Price</p>
+<p>Description : @Model.Product.Description</p>
