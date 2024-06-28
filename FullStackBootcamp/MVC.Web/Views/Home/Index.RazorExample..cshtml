@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    // C# kodları buraya yazılabilir.
+    // Örneğin, DateTime.Now ile anlık tarih ve saat alınabilir.
+    var names = new List<string> { "Ahmet", "Mehmet", "Ayşe" };
+    var year = DateTime.Now.Year;
+    var now = DateTime.Now;
+    int number = 5;
+}
+
+@functions
+{
+    string GetFullName(string firstName, string lastName)
+    {
+        return $"{firstName} {lastName}";
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<h1>Tarih : @DateTime.Now</h1>
+<h1>Şu anki tarih ve saat : @now</h1>
+<!--et işareti ile C# kodları yazılabilir. -->
+@if (DateTime.Now.Hour > 12)
+{
+    <h1>Good Afternoon</h1>
+}
+else
+{
+    <h1>Good Morning</h1>
+}
+
+<!--Ternary ? : -->
+<h1>@(number > 5 ? "Sayı 5'ten büyük" : "Sayı 5'ten küçük")</h1>
+<h1>@(DateTime.Now.Hour > 12 ? "Good Afternoon" : "Good Morning")</h1>
+
+
+@foreach (var name in names)
+{
+    <h2>@name</h2>
+}
+
+@if (year > 2023)
+{
+    <h1>2023 yılından büyük</h1>
+}
+else
+{
+    <h1>2023 yılından küçük</h1>
+}
+
+<h1>@GetFullName("Berkcan","Gümüşışık")</h1>
+
+<!--
+Development : Geliştirme ortamında çalışır.
+Staging : Test ortamında çalışır.
+Production : Canlı ortamda çalışır.
+-->

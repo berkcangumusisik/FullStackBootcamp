@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics.App", "Generics.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.App", "Extensions.App\Extensions.App.csproj", "{54875976-F205-475A-B0D7-E7B3D22AAC02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asynchorous.App", "Asynchorous.App\Asynchorous.App.csproj", "{3E3553F5-8E67-45B1-B02B-8CE04E6BDFD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asynchorous.App", "Asynchorous.App\Asynchorous.App.csproj", "{3E3553F5-8E67-45B1-B02B-8CE04E6BDFD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC.Web", "MVC.Web\MVC.Web.csproj", "{F52D2FBB-80CB-4FFF-A73C-48043B3A0038}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor.Web", "Razor.Web\Razor.Web.csproj", "{44C8EDCF-D34F-4BA6-A4FF-CEF84991D3A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{3E3553F5-8E67-45B1-B02B-8CE04E6BDFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E3553F5-8E67-45B1-B02B-8CE04E6BDFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E3553F5-8E67-45B1-B02B-8CE04E6BDFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52D2FBB-80CB-4FFF-A73C-48043B3A0038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52D2FBB-80CB-4FFF-A73C-48043B3A0038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52D2FBB-80CB-4FFF-A73C-48043B3A0038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52D2FBB-80CB-4FFF-A73C-48043B3A0038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C8EDCF-D34F-4BA6-A4FF-CEF84991D3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C8EDCF-D34F-4BA6-A4FF-CEF84991D3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C8EDCF-D34F-4BA6-A4FF-CEF84991D3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C8EDCF-D34F-4BA6-A4FF-CEF84991D3A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
