@@ -20,8 +20,24 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Home}/{action=Index}/{productId?}");
+
+
+//app.MapControllerRoute(
+//    name: "paging",
+//    pattern: "{controller}/{action}/{page}/{pageSize}");
+
 app.Run();
+
+// Route Value : /Router/Index
+// Query Value : /Router/Paging?page=1&pageSize=10
+
+
