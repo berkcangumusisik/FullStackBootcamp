@@ -2,15 +2,16 @@
 
 namespace MVC.Web.Controllers
 {
+    [Route("[controller]/[action]")]
     public class RouterController : Controller
     {
-        [Route("[controller]/[action]")]
+        
         public IActionResult Index()
         {
             return View();
         }
-
         [Route("{page}/{pageSize}")]
+        [Route("page/{page}/pagesize/{pageSize}")]
         public IActionResult Paging(int page, int pageSize)
         {
             ViewBag.page = page;
@@ -18,19 +19,27 @@ namespace MVC.Web.Controllers
 
             return View();
         }
-        [Route("{id}")]
+        
+
+        [Route("{id:int}")]
         public IActionResult Get(int id)
         {
             ViewBag.id = id;
-
             return View();
         }
-
         [Route("{productId}")]
         public IActionResult Get2(int productId)
         {
             ViewBag.id = productId;
 
+            return View();
+        }
+
+
+        [Route("{stockId?}")]
+        public IActionResult GetStock(int stockId = 30)
+        {
+            ViewBag.stockId = stockId;
             return View();
         }
     }

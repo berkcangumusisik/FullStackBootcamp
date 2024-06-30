@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MVC.Web.Models;
 using System.Diagnostics;
+using MVC.Web.Helpers;
 
 namespace MVC.Web.Controllers
 {
@@ -27,6 +28,17 @@ namespace MVC.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+
+        public IActionResult RedirectToArticle()
+        {
+            var Title = "Asp.Net Core ile Gelen Yenilikler.C#_ö";
+            var id = 30;
+
+            return RedirectToAction("Index", "Article", new { title = Title.MakeSeoFriendly(), id = id });
+
+            //RedirectToAction ile yönlendirme yaparken, yönlendirilecek controller ve action isimlerini belirtirken,
         }
     }
 }

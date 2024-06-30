@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "TagHelper";
+    var nameAsList = new List<string> { "Ali", "Veli", "Deli" };
+}
+
+<h1>Index</h1>
+
+@Html.ActionLink("go to article", "Index","Article", routeValues:new{Id=10, Title="AspNet Core"})
+
+<a asp-controller="Article" asp-action="Index" asp-route-id="5" asp-route-title="aspNet Core">Go to  article(by tag helper)</a>
+
+<environment include="Development">
+    <p>Development  ortamlarda buradaki yazı gözüksün</p>
+
+</environment>
+
+<environment exclude="Development">
+    <p>Development harici ortamlarda buradaki yazı gözüksün</p>
+
+</environment>
+
+<environment names="Development,Staging">
+    <p>Development/Staging  ortamlarda buradaki yazı gözüksün</p>
+</environment>
+
+<show-name-as-list names="@nameAsList"></show-name-as-list>
+
+
+<thumb-nail-image url="@ViewBag.imageUrl"></thumb-nail-image>
+<img src="@ViewBag.imageUrl" />
+<!--
+Tag Helper, ASP.NET Core MVC uygulamalarında HTML elementlerini daha kolay ve daha okunabilir bir şekilde oluşturmamızı sağlayan bir yapıdır. Tag Helper’lar, HTML elementlerini oluştururken C# kodu kullanmamıza olanak tanır. Bu sayede HTML elementlerini oluştururken daha az kod yazmamızı sağlar ve kodun daha okunabilir olmasını sağlar.
+
+asp-controller: Controller adını belirtir.
+asp-action: Action adını belirtir.
+asp-route-: Route değerlerini belirtir.
+asp-for: Modeldeki property’leri belirtir.
+asp-items: SelectListItem tipindeki verileri belirtir.
+asp-validation-for: Modeldeki property’lerin hata mesajlarını belirtir.
+asp-: Tag Helper’ın özelliklerini belirtir.
+
+environment : Development, Staging, Production gibi ortamların belirlenmesini sağlar.
+
+-->

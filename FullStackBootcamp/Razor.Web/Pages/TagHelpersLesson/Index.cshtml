@@ -1,0 +1,14 @@
+﻿@page
+@model Razor.Web.Pages.TagHelpersLesson.IndexModel
+@{
+}
+
+
+<a asp-page="/Article/Index" asp-route-id="2" asp-route-title="AspNet Core">Go to Article</a>
+
+<ThumbNailImageTagHelper url="/images/car.jpg" dimension="250x250" is-default="true"></ThumbNailImageTagHelper>
+<!--
+asp-page: Sayfanın yolunu belirtir.
+asp-route-: Route değerlerini belirtir.
+asp-for: Modeldeki property’leri belirtir.
+-->

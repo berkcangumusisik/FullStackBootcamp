@@ -48,3 +48,12 @@
 - Extensions
 - Senkron Programlama
 - Asenkron Programlama
+
+# 6.Gün
+- MVC'ye Giriş
+- RazorPage Giriş
+
+# 7. Gün
+- Routing İşlemleri
+- Sayfa Yönlendirme
+- Tag Helpers
